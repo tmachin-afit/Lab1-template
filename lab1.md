@@ -3,24 +3,31 @@ Tools and Software
 
 This lab will walk you through the tools we will use in this class and the best practices for running the labs.
 
-## Create VM
-Use the instructions found on Teams to create a VM
-- Download VirtualBox
-- Download Ubuntu
-- Create an Ubuntu VM
-- Make sure your user has sudo access!!! (this is the portion in the instructions with `usermod -a -G sudo vboxuser`)
+## ACE Hub Option
+After connection to the CDN VPN, log into ACE Hub (https://hub.rangers.nhl.antcenter.net/environment). 
+Set your ANT access secrets and load an environment with the class image (git.antcenter.net:4567/nyielding/acehub-tensorflow-image:latest)
+
+
+### Create Environment
+Name:               Lab1_tmachin
+Image:              git.antcenter.net:4567/nyielding/acehub-tensorflow-image:latest
+Max CPUs Needed:    1
+Required CPUs:      1
+Memory:             8 Gi
+GPU Type:           None
 
 ## Git Clone
 Use the git clone command to pull this repository onto your virtual machine in a folder of your choice.
+I reccomend using a specified folder in your */remote_home/* directory
 
 ## Create a shell script
-When we move to using the servers, you will want to automate the setup process on the containerized machine you start up.  Create a shell script, `lab1Setup.sh` and have it do the following, as if you had not yet setup your VM (if the command(s) is not there, you have seen it before):
+When we move to using the servers, you will want to automate the setup process on the containerized machine you start up.  Create a shell script, `lab1Setup.sh` and have it do the following:
 
 - update/upgrade the system
 - install/upgrade pip
 - pip install the python packages in the supplied requirements file (`python3 -m pip install -r requirements.txt`)
 
-You can run this script by doing one of the following (you man need to make it executable, `chmod +x lab1Setup.sh`):
+You can run this script by doing one of the following (you may need to make it executable, `chmod +x lab1Setup.sh`):
 
 - `/bin/bash lab1Setup.sh`
 - `./lab1Setup.sh`
