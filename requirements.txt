@@ -1,4 +1,3 @@
-sklearn
 pandas
 matplotlib
-tensorflow
+numpy
